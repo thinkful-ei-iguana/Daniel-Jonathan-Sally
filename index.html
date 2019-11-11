@@ -18,14 +18,79 @@
   </script>
   
   <script type="text/babel">
-    function App(props) {
-      
+    function Header() {
+      return (
+        <h1>Resume of Sally</h1>
+      );
+    }
+
+    function Contact() {
+      return (
+        <div>
+          <ul>
+            <li>Name: Sally</li>  
+            <li>email: Sally@sally.sally</li>  
+            <li>phone: 1-800-sally</li>
+            <li>address: 123 Sally St.</li>
+          </ul>
+          <img src="https://ia.media-imdb.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_UX214_CR0,0,214,317_AL_.jpg" alt="Sally pic" />
+        </div>
+      );
+    }
+
+    function Ed() {
+      return (
+        <div>
+          <h2>Education</h2>
+          <ul>
+            <li>I done got a dgree</li>
+            <li>I don't have more than one though</li>
+          </ul>
+        </div>
+      );
+    }
+
+    function Employment() {
+      return (
+        <div>
+          <h2>Employment History</h2>
+          <ul>
+            <li>Company Name: SallyCorp</li>
+            <li>Job Title: Sally in Chief</li>
+            <li>Dates of Employment: January - February</li>
+          </ul>
+          <ul>
+            <li>Company Name: SteveCorp</li>
+            <li>Job Title: Janator</li>
+            <li>Dates of Employment: February - March</li>
+          </ul>
+        </div>
+      );
+    }
+
+    function Main() {
+      return (
+        <main>
+          <Contact />
+          <Ed />
+          <Employment />
+        </main>
+      );
     }
 
 
+    function App(props) {
+      return (
+        <div>
+          <Header />
+          <Main />
+        </div>
+      );
+    }
 
-    // Nested elements inside the App
     ReactDOM.render(
+      <App />,
+      document.querySelector('#application-root')
     );
 
   </script>
